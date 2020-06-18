@@ -9,3 +9,5 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 ## [User Stories](user.md)
 
 ## [Wireframe diagram](wireframe.md)
+
+## [ERD diagram](erd.md)
