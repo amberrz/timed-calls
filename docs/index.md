@@ -25,7 +25,7 @@ https://developer.android.com/guide/topics/providers/contacts-provider?hl=en
 * This API will be used for the url to be able to choose to call multiple contacts with the timer.
 
 https://developer.android.com/reference/android/app/AlarmManager
-*The AlarmManager API is to set a timer for the url to connect it with the call.
+* The AlarmManager API is to set a timer for the url to connect it with the call.
 
 https://developer.android.com/reference/android/provider/Telephony
  * The Telephony API is for the provider phone call to automatically disconnect.  
