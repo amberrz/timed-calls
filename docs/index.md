@@ -23,6 +23,8 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 
 ## Device and external services 
 
+#### Developer.Android 
+
 https://developer.android.com/guide/topics/providers/contacts-provider?hl=en
 * This API will be used for the url to be able to choose to call multiple contacts with the timer.
 
