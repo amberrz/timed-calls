@@ -15,6 +15,7 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 * Students who have a bad schedule 
 
     > As a student I am always busy with school and at night is the only time I am able to make late phone calls I want an application that will  end my call if I fall asleep on the line with my best friend, and not wake up late for school.   
+
 ## Design documentation
  
 * [Wireframe diagram](wireframe.md)
