@@ -3,6 +3,7 @@ package edu.cnm.deepdive.timedcalls.service;
 import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.timedcalls.model.dao.HistoryDao;
+import edu.cnm.deepdive.timedcalls.model.dao.TimerDao;
 import edu.cnm.deepdive.timedcalls.model.entity.Timer;
 import edu.cnm.deepdive.timedcalls.model.pojo.TimerWithHistory;
 import io.reactivex.Completable;
@@ -26,11 +27,11 @@ public class TimerRepository {
 
   }
   public LiveData<List<TimerWithHistory>> getAll() {
-    return timerDao.selectAll();
+    return timerDao.selectAllWithHistory();
   }
 
   public Single<TimerWithHistory> get(long id) {
-    return timerDao.selectByID(id)
+    return timerDao.selectById(id)
         .subscribeOn(Schedulers.io());
   }
 
@@ -46,6 +47,9 @@ public class TimerRepository {
   public Completable delete(Timer timer) {
     if (timer.getId() == 0) {
       return Completable.fromAction(() -> {})
+          .subscribeOn(Schedulers.io());
+    } else {
+      return Completable.fromSingle(timerDao.delete(timer))
           .subscribeOn(Schedulers.io());
     }
   }

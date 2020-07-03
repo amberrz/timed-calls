@@ -8,7 +8,7 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(
-    indices = @Index(value = "contact_url", unique = true)
+    indices = @Index(value = "contact_uri", unique = true)
 )
 public class Timer {
 
@@ -19,8 +19,8 @@ public class Timer {
   private int limit;
 
   @NonNull
-  @ColumnInfo(name = "contact_url")
-  private String contactUrl;
+  @ColumnInfo(name = "contact_uri")
+  private String contactUri;
 
   public long getId() {
     return id;
@@ -39,12 +39,12 @@ public class Timer {
   }
 
   @NonNull
-  public String getContactUrl() {
-    return contactUrl;
+  public String getContactUri() {
+    return contactUri;
   }
 
-  public void setContactUrl(@NonNull String contactUrl) {
-    this.contactUrl = contactUrl;
+  public void setContactUri(@NonNull String contactUri) {
+    this.contactUri = contactUri;
   }
 
 

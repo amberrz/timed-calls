@@ -31,15 +31,15 @@ public interface TimerDao {
   @Delete
   Single<Integer> delete(Timer timers);
 
-  @Query("SELECT * FROM Timer ORDER BY contact_Url")
+  @Query("SELECT * FROM Timer ORDER BY contact_uri")
   LiveData<List<Timer>> selectAll();
 
   @Transaction
-  @Query("SELECT * FROM Timer ORDER BY contact_url")
-  LiveData<List<TimerWithHistory>> selectAllWithTimer();
+  @Query("SELECT * FROM Timer ORDER BY contact_uri")
+  LiveData<List<TimerWithHistory>> selectAllWithHistory();
 
   @Transaction
   @Query("SELECT * FROM Timer WHERE timer_id = :timerId")
-  LiveData<TimerWithHistory> selectById(long timerId);
+  Single<TimerWithHistory> selectById(long timerId);
 
 }
