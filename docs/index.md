@@ -27,10 +27,10 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 #### Developer.Android 
 
 https://developer.android.com/guide/topics/providers/contacts-provider?hl=en
-* This API will be used for the url to be able to choose to call multiple contacts with the timer.
+*The Contact-Provider API will allow the Provider to set the timer on multiple contacts on their contact list when they make a call. 
 
 https://developer.android.com/reference/android/app/AlarmManager
-* The AlarmManager API is to set a timer for the url to connect it with the call.
+* The AlarmManager API will allow the Provider set the time on the call on their contact list.
 
 https://developer.android.com/reference/android/provider/Telephony
- * The Telephony API is for the provider phone call to automatically disconnect.  
+ * The Telephony API is for the application to automatically disconnect the call that the provider has set it for.  

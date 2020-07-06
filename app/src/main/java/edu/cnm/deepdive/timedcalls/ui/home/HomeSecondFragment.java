@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.timedcalls.controller.ui.home;
+package edu.cnm.deepdive.timedcalls.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import edu.cnm.deepdive.timedcalls.controller.R;
+import edu.cnm.deepdive.timedcalls.R;
 
 public class HomeSecondFragment extends Fragment {
 
