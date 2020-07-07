@@ -27,28 +27,28 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 
 ## Entities
 
-* [Timer Entity](Timer.entity)
+* [Timer Entity](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/model/entity/Timer.java)
 
-* [History Entity](History.entity)
+* [History Entity](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/model/entity/History.java)
 
 ## Daos
 
-* [Timer Dao](TimerDao.dao)
+* [Timer Dao](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/model/dao/TimerDao.java)
 
-* [History Dao](Historydao.dao)
+* [History Dao](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/model/dao/HistoryDao.java)
 
 ## Repositories 
 
-* [Timer Repository](TimerRepository.service)
+* [Timer Repository](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/service/TimerRepository.java)
 
 
 ## Databases
 
-* [Timed Calls Database](TimedCallsDatabase.service)
+* [Timed Calls Database](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/service/TimedCallsDatabase.java)
 
 ## DDL
 
-* [Data Definition Language](ddl.sql) 
+* [Data Definition Language](https://github.com/amberrz/timed-calls/blob/master/docs/sql/ddl.sql) 
 
 ## Device and external services 
 
