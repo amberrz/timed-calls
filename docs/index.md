@@ -57,7 +57,7 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 
 https://developer.android.com/guide/topics/providers/contacts-provider?hl=en
 
-*The Contact-Provider API will allow the Provider to set the timer on multiple contacts on their contact list when they make a call. 
+* The Contact-Provider API will allow the Provider to set the timer on multiple contacts on their contact list when they make a call. 
 
 https://developer.android.com/reference/android/app/AlarmManager
 
