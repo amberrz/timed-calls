@@ -1,0 +1,122 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "9ce6e595b08947df0eeed28609ae4830",
+    "entities": [
+      {
+        "tableName": "History",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`history_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `duration` INTEGER NOT NULL, `date` INTEGER, `timer_id` INTEGER NOT NULL, FOREIGN KEY(`timer_id`) REFERENCES `Timer`(`timer_id`) ON UPDATE NO ACTION ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "history_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timerId",
+            "columnName": "timer_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "history_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_History_date",
+            "unique": false,
+            "columnNames": [
+              "date"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_History_date` ON `${TABLE_NAME}` (`date`)"
+          },
+          {
+            "name": "index_History_timer_id",
+            "unique": false,
+            "columnNames": [
+              "timer_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_History_timer_id` ON `${TABLE_NAME}` (`timer_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Timer",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "timer_id"
+            ],
+            "referencedColumns": [
+              "timer_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Timer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`timer_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `limit` INTEGER NOT NULL, `contact_uri` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "timer_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "limit",
+            "columnName": "limit",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contactUri",
+            "columnName": "contact_uri",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "timer_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_Timer_contact_uri",
+            "unique": true,
+            "columnNames": [
+              "contact_uri"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Timer_contact_uri` ON `${TABLE_NAME}` (`contact_uri`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9ce6e595b08947df0eeed28609ae4830')"
+    ]
+  }
+}
