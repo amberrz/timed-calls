@@ -25,6 +25,31 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 
 * [ERD diagram](erd.md)
 
+## Entities
+
+* [Timer Entity](Timer.entity)
+
+* [History Entity](History.entity)
+
+## Daos
+
+* [Timer Dao](TimerDao.dao)
+
+* [History Dao](Historydao.dao)
+
+## Repositories 
+
+* [Timer Repository](TimerRepository.service)
+
+
+## Databases
+
+* [Timed Calls Database](TimedCallsDatabase.service)
+
+## DDL
+
+* [Data Definition Language](ddl.sql) 
+
 ## Device and external services 
 
 #### Developer.Android 
