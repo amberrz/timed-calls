@@ -30,7 +30,7 @@ public interface HistoryDao {
   LiveData<List<History>> selectAll();
 
   @Query("SELECT * FROM History WHERE history_id = :historyId")
-  Single<List<History>>  selectById(long historyId );
+  Single<History>  selectById(long historyId );
 
   @Transaction
   @Query("SELECT * FROM History WHERE timer_id = :timerId")
