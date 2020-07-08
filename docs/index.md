@@ -43,13 +43,13 @@ Timed Calls is an application that will allow you set a timer on the phone call 
 
 * [History Repository](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/service/HistoryRepository.java)
 
-## Databases
+## Database
 
 * [Timed Calls Database](https://github.com/amberrz/timed-calls/blob/master/app/src/main/java/edu/cnm/deepdive/timedcalls/service/TimedCallsDatabase.java)
 
 ## DDL
 
-* [Data Definition Language](https://github.com/amberrz/timed-calls/blob/master/docs/sql/ddl.sql) 
+* [Data Definition Language](ddl.md) 
 
 ## Device and external services 
 
