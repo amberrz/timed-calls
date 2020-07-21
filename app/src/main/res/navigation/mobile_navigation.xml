@@ -3,44 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-  app:startDestination="@id/homeFragment">
+  app:startDestination="@id/navigation_contacts">
 
     <fragment
-        android:id="@+id/navigation_contacts"
-        android:name="edu.cnm.deepdive.timedcalls.ui.home.ContactsFragment"
-        android:label="contacts"
-        tools:layout="@layout/fragment_contacts">
-
-        <argument
-            android:name="myArg"
-            app:argType="string" />
-        <action
-          android:id="@+id/action_navigation_contacts_to_navigation_timer"
-          app:destination="@id/navigation_timer"/>
+      android:id="@+id/navigation_contacts"
+      android:name="edu.cnm.deepdive.timedcalls.ui.contacts.ContactFragment"
+      android:label="contact_list"
+      tools:layout="@layout/fragment_contact">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_timer"
-        android:name="edu.cnm.deepdive.timedcalls.ui.dashboard.TimerFragment"
-        android:label="@string/Timer"
+        android:name="edu.cnm.deepdive.timedcalls.ui.timer.TimerFragment"
+        android:label="@string/title_timer"
         tools:layout="@layout/fragment_timer" >
-        <action
-          android:id="@+id/action_navigation_timer_to_navigation_history"
-          app:destination="@id/navigation_history"/>
     </fragment>
 
     <fragment
         android:id="@+id/navigation_history"
-        android:name="edu.cnm.deepdive.timedcalls.ui.notifications.HistoryFragment"
-        android:label="@string/History"
-        tools:layout="@layout/fragment_history" />
-    <fragment
-      android:id="@+id/homeFragment"
-      android:name="edu.cnm.deepdive.timedcalls.ui.home.HomeFragment"
-      android:label="fragment_home"
-      tools:layout="@layout/fragment_home">
-        <action
-          android:id="@+id/action_homeFragment_to_navigation_contacts"
-          app:destination="@id/navigation_contacts"/>
+        android:name="edu.cnm.deepdive.timedcalls.ui.history.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" >
     </fragment>
 </navigation>

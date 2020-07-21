@@ -32,6 +32,6 @@
         app:navGraph="@navigation/mobile_navigation"
     />
 
-    <include layout = "@layout/fragment_contacts"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

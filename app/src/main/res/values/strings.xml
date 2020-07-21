@@ -2,7 +2,7 @@
   <string name="app_name">Timed Calls</string>
   <string name="title_activity_main">MainActivity</string>
   <!-- Strings used for fragments for navigation -->
-  <string name="first_fragment_label">First Fragment</string>
+  <string name="contact_fragment_label">First Fragment</string>
   <string name="second_fragment_label">Second Fragment</string>
   <string name="next">Next</string>
   <string name="previous">Previous</string>
@@ -29,7 +29,7 @@
   <string name="contact8">Contact8</string>
   <string name="contact9">Contact9</string>
   <string name="contact10">Contact10</string>
-  <string name="contacts">Contacts</string>
-  <string name="Timer">title_timer</string>
-  <string name="History">history</string>
+  <string name="contact_list">Contact List</string>
+  <string name="title_timer">Timer</string>
+  <string name="title_history">History</string>
 </resources>

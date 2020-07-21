@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.cnm.deepdive.timedcalls" >
 
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <application
       android:name=".TimedCallsApplication"
         android:allowBackup="false"
@@ -11,8 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".controller.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:name=".controller.MainActivity">
             <intent-filter>
               <action android:name="android.intent.action.MAIN"/>
 

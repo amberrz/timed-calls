@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.timedcalls.ui.notifications;
+package edu.cnm.deepdive.timedcalls.ui.timer;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,20 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.timedcalls.R;
 
-public class HistoryFragment extends Fragment {
+public class TimerFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private TimerViewModel timerViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_history, container, false);
-        final TextView textView = root.findViewById(R.id.history);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        timerViewModel =
+               new ViewModelProvider(this).get(TimerViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_timer, container, false);
+        final TextView textView = root.findViewById(R.id.text_dashboard);
+        timerViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
