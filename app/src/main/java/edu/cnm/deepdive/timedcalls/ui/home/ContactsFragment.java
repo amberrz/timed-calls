@@ -12,7 +12,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import edu.cnm.deepdive.timedcalls.R;
 
-public class HomeSecondFragment extends Fragment {
+public class ContactsFragment extends Fragment {
 
     @Override
     public View onCreateView(
@@ -20,21 +20,21 @@ public class HomeSecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_second, container, false);
+        return inflater.inflate(R.layout.fragment_contacts, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String myArg = HomeSecondFragmentArgs.fromBundle(getArguments()).getMyArg();
-        TextView textView = view.findViewById(R.id.textview_home_second);
+        String myArg = ContactsFragmentArgs.fromBundle(getArguments()).getMyArg();
+        TextView textView = view.findViewById(R.id.textview_contacts);
         textView.setText(getString(R.string.hello_home_second, myArg));
 
-        view.findViewById(R.id.button_home_second).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.button_contact1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(HomeSecondFragment.this)
-                        .navigate(R.id.action_HomeSecondFragment_to_HomeFragment);
+                NavHostFragment.findNavController(ContactsFragment.this)
+                        .navigate(R.id.action_homeFragment_to_navigation_contacts);
             }
         });
     }

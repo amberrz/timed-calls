@@ -40,8 +40,8 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.button_home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HomeFragmentDirections.ActionHomeFragmentToHomeSecondFragment action =
-                        HomeFragmentDirections.actionHomeFragmentToHomeSecondFragment
+                HomeFragmentDirections.ActionHomeFragmentToNavigationContacts action =
+                        HomeFragmentDirections.actionHomeFragmentToNavigationContacts
                                 ("From HomeFragment");
                 NavHostFragment.findNavController(HomeFragment.this)
                         .navigate(action);

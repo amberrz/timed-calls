@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.ContactsFragment">
+
+  <TextView
+    android:id="@+id/textview_contacts"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:textSize="20sp"
+    android:text="@string/contacts"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/button_contact1" />
+
+      <Button
+      android:id="@+id/button_contact1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact1"
+      app:layout_constraintTop_toBottomOf="@id/textview_contacts"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_contact2"/>
+
+      <Button
+        android:id="@+id/button_contact2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact2"
+        app:layout_constraintTop_toBottomOf="@id/button_contact1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_contact3"/>
+
+      <Button
+        android:id="@+id/button_contact3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact3"
+        app:layout_constraintTop_toBottomOf="@id/button_contact2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_contact4"/>
+
+      <Button
+        android:id="@+id/button_contact4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact4"
+        app:layout_constraintTop_toBottomOf="@id/button_contact3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_contact5"/>
+
+    <Button
+      android:id="@+id/button_contact5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact5"
+      app:layout_constraintTop_toBottomOf="@id/button_contact4"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_contact6"
+      />
+
+    <Button
+      android:id="@+id/button_contact6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact6"
+      app:layout_constraintTop_toTopOf="@id/button_contact5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_contact7"
+      />
+
+
+    <Button
+      android:id="@+id/button_contact7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact7"
+      app:layout_constraintTop_toTopOf="@id/button_contact6"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_contact8"/>
+
+
+    <Button
+      android:id="@+id/button_contact8"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact8"
+      app:layout_constraintTop_toBottomOf="@id/button_contact7"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_contact9"/>
+
+
+    <Button
+      android:id="@+id/button_contact9"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact9"
+      app:layout_constraintTop_toBottomOf="@id/button_contact8"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/button_contact10"/>
+
+
+    <Button
+      android:id="@+id/button_contact10"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/contact10"
+      app:layout_constraintTop_toBottomOf="@id/button_contact9"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
