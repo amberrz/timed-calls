@@ -8,7 +8,7 @@
     <fragment
       android:id="@+id/navigation_contacts"
       android:name="edu.cnm.deepdive.timedcalls.ui.contacts.ContactFragment"
-      android:label="contact_list"
+      android:label="@string/contact_list"
       tools:layout="@layout/fragment_contact">
     </fragment>
 

@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.timedcalls.model.pojo;
 
 import android.net.Uri;
+import androidx.annotation.NonNull;
 
 public class Contact {
 
@@ -39,5 +40,11 @@ public class Contact {
 
   public void setUri(Uri uri) {
     this.uri = uri;
+  }
+
+  @NonNull
+  @Override
+  public String toString() {
+    return String.format("%s [%s]", displayName, phoneNumber);
   }
 }

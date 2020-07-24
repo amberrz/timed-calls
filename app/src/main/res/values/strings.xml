@@ -2,34 +2,20 @@
   <string name="app_name">Timed Calls</string>
   <string name="title_activity_main">MainActivity</string>
   <!-- Strings used for fragments for navigation -->
-  <string name="contact_fragment_label">First Fragment</string>
+  <string name="contact_fragment_label">Contact Fragment</string>
   <string name="second_fragment_label">Second Fragment</string>
   <string name="next">Next</string>
   <string name="previous">Previous</string>
 
-  <string name="hello_first_fragment">Hello first fragment</string>
-  <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-  <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
-  <string name="hello_dashboard_second">Hello HomeSecondFragment. Arg: %1$s</string>
-  <string name="hello_notifications_second">Hello HomeSecondFragment. Arg: %1$s</string>
-  <string name="title_home">Home</string>
-  <string name="title_dashboard">Dashboard</string>
-  <string name="title_notifications">Notifications</string>
 
-  <string name="home_second">Home Second</string>
+
   <string name="history">History</string>
-  <string name="timer">Timer</string>
-  <string name="contact1">Contact1</string>
-  <string name="contact2">Contact2</string>
-  <string name="contact3">Contact3</string>
-  <string name="contact4">Contact4</string>
-  <string name="contact5">Contact5</string>
-  <string name="contact6">Contact6</string>
-  <string name="contact7">Contact7</string>
-  <string name="contact8">Contact8</string>
-  <string name="contact9">Contact9</string>
-  <string name="contact10">Contact10</string>
+  <string name="timer">Timer</string> <string name="contact10">Contact10</string>
   <string name="contact_list">Contact List</string>
   <string name="title_timer">Timer</string>
   <string name="title_history">History</string>
+  <string name="set_your_timer">Set Your Timer</string>
+  <string name="history_list">History List</string>
+  <string name="contacts">Contacts</string>
+
 </resources>
