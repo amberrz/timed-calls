@@ -2,6 +2,7 @@ package edu.cnm.deepdive.timedcalls.model.pojo;
 
 import android.net.Uri;
 import androidx.annotation.NonNull;
+import java.io.Serializable;
 
 public class Contact {
 

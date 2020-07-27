@@ -22,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int PERMISSIONS_REQUEST_CODE = 20000;
 
+    /**
+     *
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
         checkPermissions();
     }
 
+    /**
+     * Request permission to use contact data.
+     */
     private void checkPermissions() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(),
@@ -69,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Checks if permission was granted and shuts down app if permission was denied.
+     *
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
         @NonNull int[] grantResults) {

@@ -39,8 +39,8 @@ public class ContactRepository {
             Phone.CONTACT_ID + "=" + id, null, null);
         if (phones.moveToFirst()) {
           contact.setPhoneNumber(phones.getString(phones.getColumnIndex(Phone.NUMBER)));
+          contacts.add(contact);
         }
-        contacts.add(contact);
       }
       return contacts;
     })

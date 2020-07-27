@@ -21,13 +21,6 @@ public class TimerFragment extends Fragment {
         timerViewModel =
                new ViewModelProvider(this).get(TimerViewModel.class);
         View root = inflater.inflate(R.layout.fragment_timer, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        timerViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         return root;
     }
 }
