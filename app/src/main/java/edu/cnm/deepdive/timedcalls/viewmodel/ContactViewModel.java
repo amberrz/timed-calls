@@ -12,7 +12,9 @@ import androidx.lifecycle.ViewModel;
 import edu.cnm.deepdive.timedcalls.model.pojo.Contact;
 import edu.cnm.deepdive.timedcalls.service.ContactRepository;
 import io.reactivex.disposables.CompositeDisposable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ContactViewModel extends AndroidViewModel implements LifecycleObserver {
 
@@ -20,6 +22,8 @@ public class ContactViewModel extends AndroidViewModel implements LifecycleObser
   private final ContactRepository contactRepository;
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
+  private final Map<String, Contact> contactMap;
+  private final MutableLiveData<Contact> contact;
 
   public ContactViewModel(@NonNull Application application) {
     super(application);
@@ -27,6 +31,8 @@ public class ContactViewModel extends AndroidViewModel implements LifecycleObser
     contacts = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
+    contactMap = new HashMap<>();
+    contact = new MutableLiveData<>();
     loadContacts();
   }
 
@@ -37,11 +43,26 @@ public class ContactViewModel extends AndroidViewModel implements LifecycleObser
   private void loadContacts() {
     pending.add(
         contactRepository.getContacts()
+            .map((contacts) -> {
+              contactMap.clear();
+              contacts.forEach((contact) -> {
+                contactMap.put(contact.getUri().toString(), contact);
+              });
+              return contacts;
+            })
             .subscribe(
                 (contacts) -> this.contacts.postValue(contacts),
                 (throwable) -> this.throwable.postValue(throwable)
             )
     );
+  }
+
+  public void setContactUri(String uri) {
+    contact.setValue(contactMap.get(uri));
+  }
+
+  public LiveData<Contact> getContact() {
+    return contact;
   }
 
   @OnLifecycleEvent(Event.ON_STOP)

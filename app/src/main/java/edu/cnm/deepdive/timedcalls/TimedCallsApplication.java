@@ -5,6 +5,9 @@ import com.facebook.stetho.Stetho;
 import edu.cnm.deepdive.timedcalls.service.TimedCallsDatabase;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * The type Timed calls application.
+ */
 public class TimedCallsApplication extends Application {
 
   @Override

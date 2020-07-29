@@ -20,8 +20,10 @@ import edu.cnm.deepdive.timedcalls.view.ContactAdapter;
 import edu.cnm.deepdive.timedcalls.viewmodel.ContactViewModel;
 
 
-public class ContactFragment extends Fragment implements OnItemSelectedListener,
-    OnItemClickListener {
+/**
+ * The Contact fragment inflate with on click listener button to popup .
+ */
+public class ContactFragment extends Fragment implements OnItemClickListener {
 
   private ContactViewModel contactViewModel;
   private ListView contacts;
@@ -30,7 +32,6 @@ public class ContactFragment extends Fragment implements OnItemSelectedListener,
       ViewGroup container, Bundle savedInstanceState) {
     View root = inflater.inflate(R.layout.fragment_contact, container, false);
     contacts = root.findViewById(R.id.contacts);
-    contacts.setOnItemSelectedListener(this);
     contacts.setOnItemClickListener(this);
     return root;
   }
@@ -48,21 +49,13 @@ public class ContactFragment extends Fragment implements OnItemSelectedListener,
 
   }
 
-  @Override
-  public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-    Contact contact = (Contact) parent.getItemAtPosition(position);
-    Toast.makeText(getContext(), contact.toString(), Toast.LENGTH_LONG).show();
-  }
 
-  @Override
-  public void onNothingSelected(AdapterView<?> parent) {
-
-  }
 
   @Override
   public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
     Contact contact = (Contact) parent.getItemAtPosition(position);
-    Toast.makeText(getContext(), contact.toString(), Toast.LENGTH_LONG).show();
-// TODO Open up a dialog fragment set timer place a the call.
+    CallStartFragment fragment = CallStartFragment.newInstance(contact.getUri());
+    fragment.show(getChildFragmentManager(), fragment.getClass().getName());
+
   }
 }

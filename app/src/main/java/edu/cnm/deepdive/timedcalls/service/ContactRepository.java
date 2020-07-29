@@ -37,8 +37,8 @@ public class ContactRepository {
         //Asume frist phone number is correct
         Cursor phones = resolver.query(Phone.CONTENT_URI, new String[]{Phone.NUMBER},
             Phone.CONTACT_ID + "=" + id, null, null);
-        if (phones.moveToFirst()) {
-          contact.setPhoneNumber(phones.getString(phones.getColumnIndex(Phone.NUMBER)));
+       while (phones.moveToNext()) {
+          contact.getPhoneNumbers().add(phones.getString(phones.getColumnIndex(Phone.NUMBER)));
           contacts.add(contact);
         }
       }

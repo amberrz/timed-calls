@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:padding="8dp"
+  tools:context=".controller.CallStartFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+
+  <TextView
+    android:id="@+id/display_name"
+    android:layout_width="0dp"
+    app:layout_constraintHorizontal_weight="2"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/call_time_layout"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/call_time_layout"
+    android:layout_width="0dp"
+    app:layout_constraintHorizontal_weight="1"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    app:layout_constraintStart_toEndOf="@id/display_name"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/call_time"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="number"
+      android:hint="Call Time"/>
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Spinner
+    android:id="@+id/phone_numbers"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/display_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

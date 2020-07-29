@@ -8,7 +8,7 @@ heading_navigator:
 ## Timed Calls 
 
 
-v0.9.6 written by Nicholas Bennett, with contributions by Chris Hughes and Steven Z&uacute;&ntilde;iga.
+v0.9.6 written by Ambar Rodriguez.
 
 Copyright 2020 Deep Dive Coding/CNM Ingenuity, Inc.
 

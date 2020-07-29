@@ -1,6 +1,7 @@
+/*This work is copyright 2020, Ambar Rodriguez. All right reserved.
+ */
 package edu.cnm.deepdive.timedcalls.controller;
 
-import android.app.Activity;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -18,13 +19,16 @@ import edu.cnm.deepdive.timedcalls.R;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Main user interface for accessing  contact list, checking for permission, to display the
+ * contacts.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final int PERMISSIONS_REQUEST_CODE = 20000;
 
     /**
-     *
-     *
+     * Initializes and checks permission for the contact list.
      * @param savedInstanceState
      */
     @Override
@@ -43,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
         checkPermissions();
     }
 
-    /**
-     * Request permission to use contact data.
-     */
     private void checkPermissions() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(),

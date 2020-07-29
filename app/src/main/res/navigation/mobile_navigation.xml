@@ -14,14 +14,14 @@
 
     <fragment
         android:id="@+id/navigation_timer"
-        android:name="edu.cnm.deepdive.timedcalls.ui.timer.TimerFragment"
+        android:name="edu.cnm.deepdive.timedcalls.controller.TimerFragment"
         android:label="@string/title_timer"
         tools:layout="@layout/fragment_timer" >
     </fragment>
 
     <fragment
         android:id="@+id/navigation_history"
-        android:name="edu.cnm.deepdive.timedcalls.ui.history.HistoryFragment"
+        android:name="edu.cnm.deepdive.timedcalls.controller.HistoryFragment"
         android:label="@string/title_history"
         tools:layout="@layout/fragment_history" >
     </fragment>

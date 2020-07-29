@@ -3,12 +3,14 @@ package edu.cnm.deepdive.timedcalls.model.pojo;
 import android.net.Uri;
 import androidx.annotation.NonNull;
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Contact {
 
   private long id;
   private String displayName;
-  private String phoneNumber;
+  private List<String> phoneNumbers = new LinkedList<>();
   private Uri uri;
 
   public long getId() {
@@ -27,12 +29,8 @@ public class Contact {
     this.displayName = displayName;
   }
 
-  public String getPhoneNumber() {
-    return phoneNumber;
-  }
-
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
+  public List<String> getPhoneNumbers() {
+    return phoneNumbers;
   }
 
   public Uri getUri() {
@@ -46,6 +44,6 @@ public class Contact {
   @NonNull
   @Override
   public String toString() {
-    return String.format("%s [%s]", displayName, phoneNumber);
+    return String.format("%s [%s]", displayName, phoneNumbers);
   }
 }

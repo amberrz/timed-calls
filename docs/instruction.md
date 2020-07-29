@@ -1,0 +1,3 @@
+## The instructions to Time Calls
+
+When the user uses timed calls for the first time a permission request will appear requesting the user permission to have the contact list in timed calls. The user will be able to navigate to their contacts, history list and, the timer. The user will be able to select on one of their contacts and when they do a pop out will appear for them to set the time for the call. If the user selected on the wrong contact there is a pull down button that appears with the contact. The history list will appear after the call had ended, and it will show the time the User placed for the call.        

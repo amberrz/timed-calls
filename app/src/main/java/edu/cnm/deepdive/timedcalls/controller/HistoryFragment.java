@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.timedcalls.ui.history;
+package edu.cnm.deepdive.timedcalls.controller;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import edu.cnm.deepdive.timedcalls.R;
+import edu.cnm.deepdive.timedcalls.viewmodel.HistoryViewModel;
 
+/**
+ * The type History fragment is a list of the history from the contact from the previous call that where timed in the timer.
+ */
 public class HistoryFragment extends Fragment {
 
     private HistoryViewModel historyViewModel;

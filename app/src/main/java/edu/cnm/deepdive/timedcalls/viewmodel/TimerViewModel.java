@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.timedcalls.ui.timer;
+package edu.cnm.deepdive.timedcalls.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
